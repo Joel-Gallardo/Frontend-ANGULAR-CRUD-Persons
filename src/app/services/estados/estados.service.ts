@@ -9,7 +9,7 @@ export class EstadosService {
   private API_SERVER = 'http://localhost:8080/estados/';
   constructor(private httpClient: HttpClient) {}
 
-  public getAllEstadosByPais(idPais: number) : Observable<any> {
+  public getAllEstadosByPais(idPais: any): Observable<any> {
     return this.httpClient.get(this.API_SERVER+idPais);
   }
 }
